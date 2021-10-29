@@ -6,9 +6,9 @@ int main()
 
     filedescriptor = 1;
 
-    ft_putstr_fd("file descriptor = 1", filedescriptor);
+    ft_putnbr_fd(-2147483648, filedescriptor);
     write(filedescriptor, "\n", 1);
-    ft_putstr_fd("file descriptor = 2", 2);
+    ft_putnbr_fd(-2147483648, 2);
     write(2, "\n", 1);
     return (0);
 }

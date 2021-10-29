@@ -30,12 +30,19 @@ int	ft_atoi(const char *str)
 	i = 0;
 	while (ft_check(str[i]))
 		i++;
+	if (str[i] == '-')
+	{		
+		sign = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
 	while (str[i])
 	{
-		if (str[i] == '-')
-			sign = sign *(-1);
-		else if (str[i] >= '0' && str[i] <= '9')
+		if (str[i] >= '0' && str[i] <= '9')
 			result = result * 10 + (str[i] - '0');
+		else
+			break ;
 		i++;
 	}
 	return (sign * result);

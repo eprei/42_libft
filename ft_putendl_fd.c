@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static unsigned long	ft_strlen(const char *s)
+static size_t	ft_strlen(const char *s)
 {
 	unsigned long	i;
 
@@ -32,4 +32,3 @@ void ft_putendl_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
-
