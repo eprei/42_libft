@@ -35,3 +35,4 @@ void    ft_putnbr_fd(int n, int fd);
 void    ft_putendl_fd(char *s, int fd);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
+void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
