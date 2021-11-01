@@ -6,7 +6,7 @@
 /*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:20:28 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/10/28 18:20:30 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/01 12:21:26 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (s == NULL)
 		return ;
