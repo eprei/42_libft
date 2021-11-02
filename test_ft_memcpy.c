@@ -17,6 +17,12 @@ int     main()
     ft_memcpy(str2b, str2a, 13);
     printf("The Destination after ft_memcpy looks like: %s\n", str2b);
     printf("And it adress is %p\n\n", ft_memcpy(str2b, str2a, 13));
+    
+    printf("\nthe result of memcpy for NULL arguments is:\t%p\n", memcpy(((void *)0), ((void *) 0), 3));
+    printf("the result of ft_memcpy for NULL arguments is:\t%p\n", ft_memcpy(((void *)0), ((void *) 0), 3));
+
+//  printf("\nthe result of memcpy for NULL arguments is:\t%p\n", memcpy(((void *)0), "segfaulter tu dois", 17));
+//  printf("the result of ft_memcpy for NULL arguments is:\t%p\n", ft_memcpy(((void *)0), "segfaulter tu dois", 17));
 
     return (0);
 }

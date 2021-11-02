@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	main(int argc, char **argv)
+int	main()
 {
-	(void) argc;
-	printf("atoi result:  %d\n", atoi(argv[1]));
-	printf("ft_atoi result: %d\n", ft_atoi(argv[1]));
+	char n[40] = "99999999999999999999999999";
+	int i1 = atoi(n);
+	int i2 = ft_atoi(n);
+
+	printf("atoi result:  %d\n", i1);
+	printf("ft_atoi result: %d\n", i2);
 	return (0);
 }

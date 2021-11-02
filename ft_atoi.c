@@ -21,9 +21,9 @@ static int	ft_check(char c)
 
 int	ft_atoi(const char *str)
 {
-	unsigned int	result;
-	int				i;
-	int				sign;
+	unsigned long long int	result;
+	unsigned long long int	i;
+	int						sign;
 
 	sign = 1;
 	result = 0;

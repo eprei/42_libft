@@ -5,6 +5,8 @@
 int main()
 {
 	char *str;
+    char *src = "\0";
+    char *unicoide = "īœ˙ˀ˘¯ˇ¸¯.œ«‘––™ª•¡¶¢˜ˀ";
 
 	str = " !\"#$&*()*+,-./0123456789ABCDEFGHIJKLMNOPQRSTWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
     printf("Test to string:  !\"#$&*()*+,-./0123456789ABCDEFGHIJKLMNOPQRSTWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\n\n");
@@ -24,5 +26,9 @@ int main()
     printf("return of ft_strrchr for string, '|' is \t%p\n", ft_strrchr(str, '|'));
     printf("return of strrchr for string, '~' is \t\t%p\n", strrchr(str, '~'));
     printf("return of ft_strrchr for string, '~' is \t%p\n", ft_strrchr(str, '~'));
+    printf("return of strchr for string, null chaine is \t%p\n", strrchr(src, 'a'));
+    printf("return of ft_strchr for string, null chaine is \t%p\n", ft_strrchr(src, 'a'));
+    printf("return of strchr for unicoide chaine is \t%p\n", strrchr(unicoide, L'–'));
+    printf("return of ft_strchr for unicoide chaine is \t%p\n", ft_strrchr(unicoide, L'–'));
     return (0);
 }

@@ -5,6 +5,7 @@
 int main()
 {
     char *str;
+    char *src = "\0";
 
     str = "0123456789ABCDEFGHIJKLMNOPQRSTWXYZabcdefghijklmnopqrstuvwxyz~";
     printf("Test to string: 0123456789ABCDEFGHIJKLMNOPQRSTWXYZabcdefghijklmnopqrstuvwxyz~\n\n");
@@ -34,5 +35,7 @@ int main()
     printf("return of ft_strchr for string, -2147483647 is \t%p\n", ft_strchr(str, -2147483647));
     printf("return of strchr for string, -2147483648 is \t%p\n", strchr(str, -2147483648));
     printf("return of ft_strchr for string, -2147483648 is \t%p\n", ft_strchr(str, -2147483648));
+    printf("return of strchr for string, -2147483648 is \t%p\n", strchr(src, -2147483648));
+    printf("return of ft_strchr for string, -2147483648 is \t%p\n", ft_strchr(src, -2147483648));
     return (0);
 }
