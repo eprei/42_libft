@@ -3,27 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:20:28 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/01 12:21:26 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/03 11:44:36 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-
-static size_t	ft_strlen(const char *s)
-{
-	unsigned long	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

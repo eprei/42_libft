@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:40:55 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/10/28 18:10:56 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/03 11:45:27 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-static void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

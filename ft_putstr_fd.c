@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:06:25 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/10/28 17:26:46 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/03 11:46:14 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <unistd.h>
 
-static unsigned long	ft_strlen(const char *s)
-{
-	unsigned long	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -1,10 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-int	main()
+int	main(void)
 {
-	char n[40] = "99999999999999999999999999";
+	char n[40] = "-99999999999999999999999999";
 	int i1 = atoi(n);
 	int i2 = ft_atoi(n);
 

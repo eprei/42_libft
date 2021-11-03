@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:43:57 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/03 11:29:28 by Emiliano         ###   ########.fr       */
+/*   Created: 2021/11/03 11:38:36 by epresa-c          #+#    #+#             */
+/*   Updated: 2021/11/03 17:09:51 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void *ptr;
+	void	*ptr;
 
-    ptr = malloc(count * size);
-    if (ptr == NULL)
-    {
-        return (NULL);
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+	{
+		return (NULL);
  // programar: set erno to ENOMEM
-    }
-    else
-        ft_bzero(ptr, count * size);
-    return (ptr);
-    free(ptr);
+	}
+	else
+		ft_bzero(ptr, count * size);
+	return (ptr);
+	free(ptr);
 }

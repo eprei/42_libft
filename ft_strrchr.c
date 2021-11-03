@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 14:35:12 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/10/27 15:33:08 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/03 11:58:49 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	unsigned long long int	i;
 
 	i = ft_strlen(s);
 	if (ft_isascii(c) == 0)

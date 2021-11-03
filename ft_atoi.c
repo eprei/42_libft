@@ -3,12 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:11:59 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/10/26 15:12:03 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/03 14:59:48 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+/*
+static int	ft_is_int(long long int c)
+{
+	if ((-2147483648 <= c) && (c <= 2147483647))
+		return (1);
+	return (0);
+}
+
+static int	ft_str_to_long(const char *str)
+{
+	if (ft_strlen(str) > 11)
+		return (1);
+	return (0);
+}
+*/
 
 static int	ft_check(char c)
 {
