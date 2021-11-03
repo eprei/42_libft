@@ -1,2 +1,0 @@
-agregar header protection al libtf.h : ifndef #libtft.h define #libft.h
-libft unit test: https://github.com/alelievr/libft-unit-test
