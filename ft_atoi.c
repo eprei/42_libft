@@ -3,29 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:11:59 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/03 14:59:48 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/04 10:39:31 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-static int	ft_is_int(long long int c)
-{
-	if ((-2147483648 <= c) && (c <= 2147483647))
-		return (1);
-	return (0);
-}
 
-static int	ft_str_to_long(const char *str)
+static int	ft_is_maj(long long int c)
 {
-	if (ft_strlen(str) > 11)
+	if (c > 2147483647)
 		return (1);
 	return (0);
 }
-*/
+static int  ft_is_min(long long int c)
+{
+    if (c < -2147483648)
+        return (1);
+    return (0);
+}
 
 static int	ft_check(char c)
 {
@@ -52,11 +50,15 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		i++;
 	}
-	else if (str[i] == '+')
+	if (str[i] == '+')
 		i++;
 	while (str[i])
 	{
-		if (str[i] >= '0' && str[i] <= '9')
+		if (ft_is_maj(sign * result))
+			return (-1);
+		if (ft_is_min(sign * result))
+			return (0);
+		else if (str[i] >= '0' && str[i] <= '9')
 			result = result * 10 + (str[i] - '0');
 		else
 			break ;
