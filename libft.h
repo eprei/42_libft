@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 15:16:08 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 10:59:25 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/04 17:28:03 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif

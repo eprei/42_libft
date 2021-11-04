@@ -6,7 +6,7 @@
 /*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:09 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/03 17:09:52 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:43:53 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	**ft_split(char const *s, char c)
 	unsigned long long int	i;
 	unsigned long long int	j;
 	char					*ptr[2];
-	char 					**ret;
+	char					**ret;
 
 	i = 0;
 	while (s[i] != c)

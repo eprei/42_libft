@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:11:59 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 10:39:31 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/04 12:55:42 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ static int	ft_is_maj(long long int c)
 		return (1);
 	return (0);
 }
-static int  ft_is_min(long long int c)
+
+static int	ft_is_min(long long int c)
 {
-    if (c < -2147483648)
-        return (1);
-    return (0);
+	if (c < -2147483648)
+		return (1);
+	return (0);
 }
 
 static int	ft_check(char c)

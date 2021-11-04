@@ -7,6 +7,7 @@ int main()
 	char *str;
     char *src = "\0";
     char *unicoide = "īœ˙ˀ˘¯ˇ¸¯.œ«‘––™ª•¡¶¢˜ˀ";
+    char s[] = "tripouille";
 
 	str = " !\"#$&*()*+,-./0123456789ABCDEFGHIJKLMNOPQRSTWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
     printf("Test to string:  !\"#$&*()*+,-./0123456789ABCDEFGHIJKLMNOPQRSTWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\n\n");
@@ -30,5 +31,7 @@ int main()
     printf("return of ft_strchr for string, null chaine is \t%p\n", ft_strrchr(src, 'a'));
     printf("return of strchr for unicoide chaine is \t%p\n", strrchr(unicoide, L'–'));
     printf("return of ft_strchr for unicoide chaine is \t%p\n", ft_strrchr(unicoide, L'–'));
+    printf("return of strchr for tripouille chaine is \t%p\n", strrchr(s, 372));
+    printf("return of ft_strchr for tripouille chaine is \t%p\n", (ft_strrchr(s, 372)));
     return (0);
 }

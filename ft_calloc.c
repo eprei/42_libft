@@ -6,7 +6,7 @@
 /*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:38:36 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/03 17:09:51 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:47:03 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ void	*ft_calloc(size_t count, size_t size)
 	if (ptr == NULL)
 	{
 		return (NULL);
- // programar: set erno to ENOMEM
 	}
 	else
 		ft_bzero(ptr, count * size);
 	return (ptr);
 	free(ptr);
 }
+
+ //programar: set erno to ENOMEM

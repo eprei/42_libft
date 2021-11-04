@@ -6,7 +6,7 @@
 /*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:42:08 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/03 17:09:48 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:50:50 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (NULL);
 }
+
+// Estudiar
