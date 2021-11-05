@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 14:35:12 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 14:30:56 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/05 16:09:00 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	ptr = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char) c)
 			ptr = (char *)(s + i);
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == (char) c)
 		ptr = (char *)(s + i);
 	return (ptr);
 }
-
-// Estudiar la nueva version

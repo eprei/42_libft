@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:11:59 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 12:55:42 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/05 14:51:54 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		i++;
 	}
-	if (str[i] == '+')
+	else if (str[i] == '+')
 		i++;
 	while (str[i])
 	{
@@ -67,3 +67,10 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+/*
+int	main()
+{
+	printf("the return of ft_atoi is: %d\n", ft_atoi("-+42"));
+	printf("the return of atoi is: %d\n", atoi("-+42"));	
+	return(0);
+}*/

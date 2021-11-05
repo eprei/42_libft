@@ -3,11 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:26 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/01 12:45:29 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/05 16:32:10 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+    
+}
