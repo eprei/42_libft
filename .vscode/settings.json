@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "FT_MEMMOVERESP.C": "cpp"
+        "FT_MEMMOVERESP.C": "cpp",
+        "ft_itoaRESP.C": "cpp"
     }
 }

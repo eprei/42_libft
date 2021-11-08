@@ -3,14 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:26 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/05 16:32:10 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/08 11:59:30 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    
+	char				*result;
+	unsigned long int	i;
+
+	if (!s || !f)
+		return (NULL);
+	result = strdup(s);
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	return (result);
 }

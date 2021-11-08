@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 15:16:08 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/05 16:33:26 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/08 15:35:37 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	**ft_split(char const *s, char c);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char    *ft_strtrim(char const *s1, char const *set);
-char    *ft_itoa(int n);
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	**ft_split(char const *s, char c);
 
 #endif

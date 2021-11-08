@@ -6,37 +6,56 @@
 /*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:09 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 11:43:53 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/08 17:11:14 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
-{	
-	unsigned long long int	i;
-	unsigned long long int	j;
-	char					*ptr[2];
-	char					**ret;
+static size_t	ft_strlen_char(const char *s, char c)
+{
+	unsigned long long	i;
 
 	i = 0;
-	while (s[i] != c)
+	while (s[i] != 'c')
 		i++;
-	ptr[0] = malloc(sizeof(char) * i + 1 * sizeof(char));
-	if (ptr[0] == NULL)
+	return (i);
+}
+
+static int	ft_counter_char(char const *str, char x)
+{
+	long int	i;
+
+	i = 0;
+	while (*str)
+	{
+		if (*str == x)
+			i++;
+		str++;
+	}
+	return (i);
+}
+
+char	**ft_split(char const *s, char c)
+{		
+	char	*ptr;
+
+	ptr = (char *)malloc((ft_strlen(s) + ft_strlen_char(s, c) + 1)
+			* sizeof(char));
+	if (ptr == NULL)
 		return (NULL);
-	ft_memcpy(ptr[0], s, i);
-	ptr[0][i] = '\0';
-	j = 0;
-	while (s[i + j] != '\0')
-		j++;
-	ptr[1] = malloc(sizeof(char) * j + 1 * sizeof(char));
-	if (ptr[1] == NULL)
-		return (NULL);
-	ft_memcpy(ptr[1], s + i, j);
-	ptr[1][j] = '\0';
-	ret = ptr;
-	return (ret);
-	free(ptr[0]);
-	free(ptr[1]);
+	while (*ptr != 'c' && *ptr != '\0')
+		*ptr++ = *s++;
+	*ptr = '\0';
+	return (ptr);
+}
+
+int	main(void)
+{
+	char		*str;
+	size_t		i;
+
+	str = "Hello world!";
+	printf("The return of ft_split is: %s", (ft_split(str, 'r')));
+	return (0);
 }

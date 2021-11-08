@@ -6,7 +6,7 @@
 /*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:18 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 15:35:53 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/08 17:09:45 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 
 static int	ft_intlen(int c)
 {
-	unsigned int	i;
-	unsigned int 	x;
+	int			i;
+	long int	x;
 
-	x = (unsigned int) c;
+	x = c;
 	i = 0;
+	if (x < 0)
+	{
+		x = x * (-1);
+		i++;
+	}
 	while (x > 9)
 	{
 		x = x / 10;
@@ -30,28 +35,28 @@ static int	ft_intlen(int c)
 
 char	*ft_itoa(int n)
 {
-	char	*ptr;
-	int	i;
-	int len_n;
+	char		*ptr;
+	int			len_n;
+	long int	m;
 
-	len_n = ft_intlen(n);
-	i = 0;
-	ptr = malloc(sizeof(char) * len_n + 2 * (sizeof(char)));
-	while (len_n >= i)
+	m = n;
+	len_n = ft_intlen(m);
+	ptr = (char *)malloc(sizeof(char) * (len_n + 1));
+	if (ptr == NULL)
+		return (NULL);
+	if (len_n == 0 || m == 0)
+		ptr[0] = '0';
+	ptr[len_n] = '\0';
+	if (m < 0)
 	{
-		ptr[len_n - i]= n % 10 + '\0';
-		n = n % 10;
-		i++; 
+		ptr[0] = '-';
+		m = m * (-1);
 	}
-	ptr[len_n + 1] = '\0';
+	while (m > 0)
+	{
+		ptr[len_n - 1] = (m % 10) + 48;
+		m = m / 10;
+		len_n--;
+	}
 	return (ptr);
 }
-/*
-int	main()
-{
-	int x;
-
-	x = -123456789;
-	printf("ft_itoa for %d is %s\n", x, ft_itoa(x));
-	return (0);
-}*/

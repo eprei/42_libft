@@ -6,7 +6,7 @@
 /*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:44:50 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/03 15:57:43 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/08 16:54:59 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char					*ptr;
 	unsigned long long int	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	ptr = malloc(len_s1 + len_s2 + (1 * (sizeof(char))));

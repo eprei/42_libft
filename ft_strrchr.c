@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 14:35:12 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/05 16:09:00 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:00:40 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned long long int	i;
-	char			*ptr;
+	char					*ptr;
 
 	i = 0;
 	ptr = 0;

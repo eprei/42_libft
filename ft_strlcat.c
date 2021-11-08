@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:42:46 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/05 12:49:43 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:00:28 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
-	size_t src_len;
-	size_t dst_len;
+	size_t	i;
+	size_t	j;
+	size_t	src_len;
+	size_t	dst_len;
 
 	j = 0;
 	dst_len = ft_strlen(dst);
