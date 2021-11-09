@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:42:46 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/08 12:00:28 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:57:57 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (src_len + dst_len);
 	}
 }
-//estudiar y mejorar
+
 /*
 int	main()
 {
@@ -46,17 +46,21 @@ int	main()
 	char str2[100] = " whats up 123456789";
 	char ptr1[27] = "Hello world";
 	char ptr2[100] = " whats up 123456789";
-	
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
+	dest[0] = 'B';
+
 	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
 	char buff1[0xF00] = "there is no stars in the sky";
 	char buff2[0xF00] = "there is no stars in the sky";
 	size_t max = 0;
 
+	ft_strlcat(dest, src, 1);
 	ft_strlcat(buff2, str, max);
-//	strlcat(buff2, str, max);	
-	printf("the result is:\t%s\n", buff2);
-//	strlcat(str2, str1, 0);
-//	ft_strlcat(str2, str1, 0);
+	strlcat(buff2, str, max);	
+	printf("the result is:\t%s\n", dest);
+	strlcat(str2, str1, 0);
+	ft_strlcat(str2, str1, 0);
 
 	return(0);
 }*/

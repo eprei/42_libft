@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:44:39 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/04 11:45:15 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/09 18:22:06 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*rtn;
+	char	*substr;
 	size_t	i;
 
 	if (!s)
 		return (NULL);
 	if ((size_t)start > ft_strlen(s))
 		return (ft_strdup(""));
-	rtn = malloc(sizeof(char) * (len + 1));
+	substr = malloc(sizeof(char) * (len + 1));
+	if (substr == NULL)
+		return (NULL);
 	i = 0;
-	if (!rtn)
-		return (0);
 	while (i < len)
 	{
-		rtn[i] = *(s + start + i);
+		substr[i] = *(s + start + i);
 		i++;
 	}
-	rtn[i] = '\0';
-	return (rtn);
+	substr[i] = '\0';
+	return (substr);
 }

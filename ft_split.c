@@ -3,59 +3,69 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:09 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/08 17:11:14 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/09 18:23:55 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen_char(const char *s, char c)
+static size_t	words(char const *s, char c)
 {
-	unsigned long long	i;
+	size_t	words;
 
-	i = 0;
-	while (s[i] != 'c')
-		i++;
-	return (i);
-}
-
-static int	ft_counter_char(char const *str, char x)
-{
-	long int	i;
-
-	i = 0;
-	while (*str)
+	words = 0;
+	while (*s)
 	{
-		if (*str == x)
-			i++;
-		str++;
+		if (*s != c)
+		{
+			words++;
+			while (*s != '\0' && *s != c)
+				s++;
+		}
+		s++;
 	}
-	return (i);
+	return (words);
 }
 
 char	**ft_split(char const *s, char c)
-{		
-	char	*ptr;
+{
+	size_t		len;
+	size_t		index;
+	const char	*start;
+	char		**split;
 
-	ptr = (char *)malloc((ft_strlen(s) + ft_strlen_char(s, c) + 1)
-			* sizeof(char));
-	if (ptr == NULL)
+	if (s == 0)
 		return (NULL);
-	while (*ptr != 'c' && *ptr != '\0')
-		*ptr++ = *s++;
-	*ptr = '\0';
-	return (ptr);
+	split = (char **) malloc(((words(s, c)) + 1) * sizeof(*split));
+	if (split == NULL)
+		return (NULL);
+	index = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		start = s;
+		len = 0;
+		while (*s && *s != c)
+		{
+			s++;
+			len++;
+		}
+		if (*(s - 1) != c)
+			split[index++] = ft_substr(start, 0, len);
+	}
+	split[index] = 0;
+	return (split);
 }
 
-int	main(void)
+int main()
 {
-	char		*str;
-	size_t		i;
+	char	*str;
 
-	str = "Hello world!";
-	printf("The return of ft_split is: %s", (ft_split(str, 'r')));
+	str = "hoca que cal amicos";
+	ft_split(str, 'c');
 	return (0);
 }

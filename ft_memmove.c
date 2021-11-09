@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:42:08 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/08 12:15:01 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:26:04 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,37 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	unsigned char	*ptr_dst;
+	unsigned char	*ptr_src;
 	size_t			index;
 
 	index = 0;
-	ptr1 = (unsigned char *) dst;
-	ptr2 = (unsigned char *) src;
+	ptr_dst = (unsigned char *) dst;
+	ptr_src = (unsigned char *) src;
 	if ((src == NULL) && (dst == NULL))
 		return (NULL);
-	else if (ptr1 > ptr2)
+	else if (ptr_dst > ptr_src)
 	{
 		while (len > 0)
 		{
-			ptr1 [len - 1] = ptr2 [len - 1];
+			ptr_dst [len - 1] = ptr_src [len - 1];
 			len--;
 		}
 	}
 	while (index < len)
 	{
-		ptr1[index] = ptr2[index];
+		ptr_dst[index] = ptr_src[index];
 		index++;
 	}
 	return (dst);
 }
+/*
+int	main()
+{
+	char one[15] = "123456789";
+	char two[15] = "000000000000";
+	
+	ft_memmove(one + 1, one, 8);
+	printf("%s\n", one);
+	return (0);
+}*/
