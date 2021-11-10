@@ -3,31 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:45:09 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/10 11:11:09 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:57:41 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	**ft_free_error(char **tab)
- {
- 	unsigned int	i;
-	
-	if (!tab)
-		return (NULL);
- 	i = 0;
- 	while (tab[i])
- 	{
- 		free(tab[i]);
- 		i++;
- 	}
- 	free(tab);
- 	return (NULL);
- }
-*/
+
 static size_t	ft_words(char const *s, char c)
 {
 	size_t	words;
@@ -53,11 +37,8 @@ char	**ft_split(char const *s, char c)
 	const char	*start;
 	char		**split;
 
-//	if (!s)
-//		return (NULL);
-//	if (!(split = (char **) malloc(((ft_words(s, c)) + 1) * sizeof(*split))))
-//		return (ft_free_error(split));
-	if (!s || (!(split = (char **) malloc(((ft_words(s, c)) + 1) * sizeof(*split)))))
+	split = (char **) malloc(((ft_words(s, c)) + 1) * sizeof(*split));
+	if (!s || split == NULL)
 		return (NULL);
 	index = 0;
 	while (*s)
@@ -77,12 +58,36 @@ char	**ft_split(char const *s, char c)
 	split[index] = 0;
 	return (split);
 }
+
 /*
+
+char	**ft_free_error(char **tab)
+ {
+ 	unsigned int	i;
+	
+	if (!tab)
+		return (NULL);
+ 	i = 0;
+ 	while (tab[i])
+ 	{
+ 		free(tab[i]);
+ 		i++;
+ 	}
+ 	free(tab);
+ 	return (NULL);
+ }
+
+	if (!s)
+		return (NULL);
+	if (!(split = (char **) malloc(((ft_words(s, c)) + 1) * sizeof(*split))))
+		return (ft_free_error(split));
+
+
 int main()
 {
 	char	*str;
 
-	str = "hoca que cal amicos";
+	str = "";
 	ft_split(str, 'c');
 	return (0);
 }*/

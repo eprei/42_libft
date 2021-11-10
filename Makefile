@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+         #
+#    By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 13:36:28 by epresa-c          #+#    #+#              #
-#    Updated: 2021/11/09 17:02:33 by Emiliano         ###   ########.fr        #
+#    Updated: 2021/11/10 14:59:03 by epresa-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS = ft_toupper.c ft_tolower.c ft_strrchr.c ft_strncmp.c \
 	ft_isalpha.c ft_isalnum.c ft_bzero.c ft_atoi.c ft_putendl_fd.c \
 	ft_memcpy.c ft_memchr.c ft_memcmp.c ft_memmove.c ft_memset.c \
 	ft_calloc.c ft_strdup.c ft_strlcpy.c ft_strnstr.c ft_strjoin.c \
-	ft_substr.c ft_memccpy.c ft_itoa.c ft_strlcat.c ft_striteri.c \
+	ft_substr.c ft_itoa.c ft_strlcat.c ft_striteri.c \
 	ft_strmapi.c ft_strtrim.c ft_split.c
 
 OBJ = $(SRCS:.c=.o)
@@ -37,13 +37,11 @@ $(NAME):
 	$(INDEX) $(NAME)
 
 clean:
-	/bin/rm -f *.o
+	/bin/rm -f $(OBJ)
 
 fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
 
-sololib: $(NAME) clean
-
-.PHONY: all clean fclean re sololib
+.PHONY: all clean fclean re

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:04:51 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/10 11:24:43 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/10 16:03:10 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	if (!dstsize)
 		return (src_len);
-	while (src[i] != '\0' && i < dstsize)
+	while (src[i] != '\0' && (i < dstsize - 1))
 	{
 		dst[i] = src[i];
 		i++;
@@ -44,6 +44,7 @@ int	main(void)
 	strlcpy(dest, src, 6);	
 	printf("The source after strlcpy is: %s\n", src);
 	printf("The dest after strlcpy is: %s\n\n", dest);
+	printf("The dest[5] after strlcpy is: %c\n\n", dest[5]);
 	printf("The return for strlcpy is: %lu\n", ft_strlcpy(dest, src, 6));
 
 	printf("The source before ft_strlcpy is: %s\n", src);
@@ -51,6 +52,7 @@ int	main(void)
 	ft_strlcpy(dest, src, 6);
 	printf("The source after ft_strlcpy is: %s\n", src);
 	printf("The dest after ft_strlcpy is: %s\n\n", dest);
+	printf("The dest[5] after ft_strlcpy is: %c\n\n", dest[5]);
 	printf("The return for ft_strlcpy is: %lu\n", ft_strlcpy(dest, src, 6));
 
 	return (0);

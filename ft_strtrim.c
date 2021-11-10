@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:44:59 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/09 14:38:05 by Emiliano         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:57:56 by epresa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const* s1, char const* set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const* s1, char const* set)
 			start++;
 		while (s1[end - 1] && ft_strchr(set, s1[end - 1]) && end > start)
 			end--;
-		ptr = (char*)malloc(sizeof(char) * (end - start + 1));
+		ptr = (char *)malloc(sizeof(char) * (end - start + 1));
 		if (ptr)
 			ft_strlcpy(ptr, &s1[start], end - start + 1);
 	}
