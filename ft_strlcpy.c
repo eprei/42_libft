@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epresa-c <epresa-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Emiliano <Emiliano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:04:51 by epresa-c          #+#    #+#             */
-/*   Updated: 2021/11/08 11:58:54 by epresa-c         ###   ########.fr       */
+/*   Updated: 2021/11/10 11:24:43 by Emiliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,26 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (src_len);
 }
+
 /*
 int	main(void)
 {
 	char src[] = "coucou";
 	char dest[10]; memset(dest, 'A', 10);
 
-//	strlcpy(dest, src, 6);	
-//	printf("The result for strlcpy is: %s\n", dest);
-//	printf("The result for strlcpy is: %lu\n", strlcpy(dest, src, 6));
+	printf("The source before strlcpy is: %s\n", src);
+	printf("The dest before strlcpy is: %s\n\n", dest);
+	strlcpy(dest, src, 6);	
+	printf("The source after strlcpy is: %s\n", src);
+	printf("The dest after strlcpy is: %s\n\n", dest);
+	printf("The return for strlcpy is: %lu\n", ft_strlcpy(dest, src, 6));
+
+	printf("The source before ft_strlcpy is: %s\n", src);
+	printf("The dest before ft_strlcpy is: %s\n\n", dest);
 	ft_strlcpy(dest, src, 6);
-	printf("The result for strlcpy is: %s\n", dest);
-	printf("The result for ft_strlcpy is: %lu\n", ft_strlcpy(dest, src, 6));
+	printf("The source after ft_strlcpy is: %s\n", src);
+	printf("The dest after ft_strlcpy is: %s\n\n", dest);
+	printf("The return for ft_strlcpy is: %lu\n", ft_strlcpy(dest, src, 6));
+
 	return (0);
 }*/
